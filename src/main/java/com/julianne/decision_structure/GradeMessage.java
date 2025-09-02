@@ -40,6 +40,7 @@ public class GradeMessage {
         // switch expressions
         String message = switch(grade) {
             case "A" -> "Excellent job!";
+            // or case "A", "B" -> "Excellent job!";
             case "B" -> "Good job!";
             case "C" -> "You've done okay!";
             case "D" -> "Well, you passed.";
