@@ -1,4 +1,4 @@
-package com.julianne.alarmClock;
+package com.julianne.alarm_clock;
 
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;

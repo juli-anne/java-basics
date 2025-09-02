@@ -1,4 +1,4 @@
-package com.julianne.alarmClock;
+package com.julianne.alarm_clock;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
