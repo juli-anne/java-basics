@@ -14,7 +14,7 @@ public class GrossPayCalculator {
 
         System.out.println("What is your hourly pay rate?");
         double rate = scanner.nextDouble();
-        
+
         // close the scanner when we are done with asking for inputs
         scanner.close();
         // define the calc
