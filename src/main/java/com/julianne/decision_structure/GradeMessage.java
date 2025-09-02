@@ -11,6 +11,8 @@ public class GradeMessage {
         String grade = scanner.next();
         scanner.close();
 
+        // switch case
+        /*
         String message;
 
         switch (grade) {
@@ -33,6 +35,17 @@ public class GradeMessage {
                 message = "Error. Invalid grade!";
                 break;
         }
+        */
+
+        // switch expressions
+        String message = switch(grade) {
+            case "A" -> "Excellent job!";
+            case "B" -> "Good job!";
+            case "C" -> "You've done okay!";
+            case "D" -> "Well, you passed.";
+            case "E" -> "Sorry, you failed.";
+            default -> "Error. Invalid grade!";
+        };
 
         System.out.println(message);
     }
