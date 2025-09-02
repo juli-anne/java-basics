@@ -1,4 +1,4 @@
-package loops;
+package com.julianne.loops;
 
 import java.util.Scanner;
 
