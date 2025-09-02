@@ -6,6 +6,19 @@ public class Rectangle {
     private double length;
     private double sides = 4;
 
+    // constructors purpose is to set up the initial state before using it
+    // default constructors already exist
+    // don't set this.width in constructors, best to do in methods
+    public Rectangle() {
+        setWidth(0);
+        setLength(0);
+    }
+
+    public Rectangle(double width, double length) {
+        setWidth(width);
+        setLength(length);
+    }
+
     public double calculatePerimeter() {
         return (2 * length) * (2 * width);
     }
