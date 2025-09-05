@@ -14,9 +14,14 @@ public class Rectangle {
         setLength(0);
     }
 
+    // overloading method
     public Rectangle(double width, double length) {
         setWidth(width);
         setLength(length);
+    }
+
+    public void print() {
+        System.out.println("Rectangle");
     }
 
     public double calculatePerimeter() {

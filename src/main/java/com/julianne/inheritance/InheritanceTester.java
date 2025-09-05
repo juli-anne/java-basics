@@ -1,5 +1,7 @@
 package com.julianne.inheritance;
 
+import com.julianne.objects.Rectangle;
+
 public class InheritanceTester {
 
     public static void main(String[] args) {
@@ -16,6 +18,12 @@ public class InheritanceTester {
         square.setLength(25);
         square.calculatePerimeter();
 
-        System.out.println(square.calculatePerimeter());
+     //   System.out.println(square.calculatePerimeter());
+
+        Rectangle rectangle = new Rectangle();
+        // print what the rectangle says
+        rectangle.print();
+        // print what the square says, pass in value
+        square.print("square");
     }
 }

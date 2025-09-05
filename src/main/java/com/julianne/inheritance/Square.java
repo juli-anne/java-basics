@@ -11,4 +11,9 @@ public class Square extends Rectangle {
         return sides * length;
         // OR return getSides() * getLength;
     }
+
+    // overloading method
+    public void print(String what) {
+        System.out.println(what);
+    }
 }
