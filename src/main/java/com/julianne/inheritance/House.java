@@ -25,15 +25,15 @@ public class House {
         // implicit upcast from dog to animal - only has access to the methods it upcasted to
         Animal sasha = new Dog();
         sasha.makeSound();
+        // feed(sasha); // up here is dog food because here it's a dog
         // sasha.fetch(); - sasha can't fetch - it's upcasted to animal - animal does not have fetch
         // changing sasha to a cat
         sasha = new Cat();
         sasha.makeSound();
-        System.out.println("...");
         // sasha can't scratch - downcast her
         // (Cat) down casting + extra () to make it an object to be stored somewhere
         // sasha is still an animal
-        ((Cat)sasha).scratch(); // this is temporary
+        // ((Cat)sasha).scratch(); // this is temporary, just on this line to access scratch
 
         // to do it permanently (cast it and store it in an object - sashaTheDog):
         // Animal sasha = new Dog(); // can't do it with Animal sasha = new Cat(); like this
@@ -48,8 +48,25 @@ public class House {
         System.out.println(isDog);
         boolean isCat = sasha instanceof Cat; // true
         System.out.println(isCat);
+
+        System.out.println("...");
+        // feeding
+        feed(lily);
+        feed(rocky);
+        feed(sasha); // cat food because changed in cat
     }
 
     // type casting is the action of converting an object's type into a different one
     // can be performed upward or downward on an inheritance (family) tree
+
+    //  ...
+    // feed takes an Animal, but also any subclass of animal
+    public static void feed(Animal animal) {
+
+        if (animal instanceof Dog) {
+            System.out.println("dog food");
+        } else if (animal instanceof Cat) {
+            System.out.println("cat food");
+        }
+    }
 }
