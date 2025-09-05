@@ -39,9 +39,17 @@ public class House {
         // Animal sasha = new Dog(); // can't do it with Animal sasha = new Cat(); like this
         // - they are siblings but not in the same hierarchy - class exception error
         // Dog sashaTheDog = (Dog)sasha; // to access anything from the dog class, use sashaTheDog
+
+        System.out.println("...");
+        // the instanceof operator
+        boolean isAnimal = sasha instanceof Animal; // true
+        System.out.println(isAnimal);
+        boolean isDog = sasha instanceof Dog; // false - because right now it's a cat - check last exec
+        System.out.println(isDog);
+        boolean isCat = sasha instanceof Cat; // true
+        System.out.println(isCat);
     }
 
     // type casting is the action of converting an object's type into a different one
     // can be performed upward or downward on an inheritance (family) tree
-
 }
