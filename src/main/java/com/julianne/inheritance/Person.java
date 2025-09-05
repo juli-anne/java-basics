@@ -12,9 +12,9 @@ public class Person {
         System.out.println("In person default constructor");
     }
 
-    public Person(String name) {
-        System.out.println("In Person second constructor");
-    }
+//    public Person(String name) {
+//        System.out.println("In Person second constructor");
+//    }
 
     // getters and setters
     public String getName() {

@@ -3,8 +3,8 @@ package com.julianne.objects;
 public class Rectangle {
 
     private double width;
-    private double length;
-    private double sides = 4;
+    protected double length;
+    protected double sides = 4;
 
     // constructors purpose is to set up the initial state before using it
     // default constructors already exist

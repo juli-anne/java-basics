@@ -14,7 +14,7 @@ public class Employee extends Person {
         // if empty default, if some name the 2nd
         // always the first line in the subclass constructor
         // after adding the 2nd constructor the default doesn't exist anymore so we have to call it
-        super("angie");
+        // super("angie");
         System.out.println("In Employee default constructor");
     }
 
