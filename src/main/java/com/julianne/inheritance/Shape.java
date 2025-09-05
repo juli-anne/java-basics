@@ -1,6 +1,4 @@
-package com.julianne.chain_of_inheritance;
-
-import com.julianne.objects.Rectangle;
+package com.julianne.inheritance;
 
 // defining a sealed class - this is the super
 // it permits direct inheritance to Rectangle and Circle
