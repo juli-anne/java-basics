@@ -54,6 +54,19 @@ public class House {
         feed(lily);
         feed(rocky);
         feed(sasha); // cat food because changed in cat
+
+        System.out.println("...");
+        // the instanceof pattern matching
+        if(sasha instanceof Cat sashaTheCat) {
+            sashaTheCat.scratch(); // at runtime sasha is a cat now
+        }
+
+        System.out.println("...");
+        // OR shorter:
+        Animal leyla = new Dog();
+        if(leyla instanceof Dog leylaTheDog) {
+            leylaTheDog.fetch();
+        }
     }
 
     // type casting is the action of converting an object's type into a different one
