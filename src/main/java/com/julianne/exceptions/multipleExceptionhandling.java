@@ -16,12 +16,17 @@ public class multipleExceptionhandling {
             while (fileReader.hasNext()) {
                 System.out.println(fileReader.nextDouble()); // throws an exception because expected double
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found exception: " + e.getMessage());
-        } catch (InputMismatchException e) {
-            System.out.println("Input Mismatch exception: " + e.getMessage());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+          } catch (FileNotFoundException | InputMismatchException e ) {
+            e.printStackTrace(); // catch in a single line
         }
+
+//        } catch (FileNotFoundException e) {
+//            System.out.println("File not found exception: " + e.getMessage());
+//        } catch (InputMismatchException e) {
+//            System.out.println("Input Mismatch exception: " + e.getMessage());
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
+
     }
 }
