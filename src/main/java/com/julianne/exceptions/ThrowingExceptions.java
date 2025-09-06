@@ -1,5 +1,9 @@
 package com.julianne.exceptions;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 // throw - flag errors in your code with throwing exceptions by yourself
 public class ThrowingExceptions {
 
@@ -13,5 +17,18 @@ public class ThrowingExceptions {
                 }
 
                 return payRate * hours;
+    }
+
+    // I don't want to handle it - I'm throwing it too
+    public static void rethrowException() throws IOException {
+        File file = new File("nonexistent.txt");
+        file.createNewFile();
+    }
+
+    // polymorphic throws statement
+    public static void rethrowExceptions() throws IOException {
+        File file = new File("nonexistent.txt");
+        file.createNewFile();
+        Scanner fileReader = new Scanner(file);
     }
 }
