@@ -14,10 +14,10 @@ import java.util.*;
 public class CollectionsDemo {
 
     public static void main(String[] args) {
-        // setDemo();
+        setDemo();
         // listDemo();
         // queueDemo();
-        mapDemo();
+        // mapDemo();
     }
 
     public static void setDemo() {
@@ -28,6 +28,14 @@ public class CollectionsDemo {
         fruits.add("Apple");
         fruits.add("Banana");
         fruits.add("Orange");
+
+        // iterating - with a loop of your choice
+        var i = fruits.iterator();
+        while (i.hasNext()) {
+            System.out.println(i.next()); // gets the next object
+        } // iterator doesn't work on map because it's not in the collection group
+
+        System.out.println("\n.....");
 
         // print it - it's not shown in order because set is an unordered collection
         System.out.println(fruits);
