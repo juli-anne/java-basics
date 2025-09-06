@@ -1,18 +1,18 @@
 package com.julianne.data_structures;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 // data structures store and organize a collection of objects in a way that operations can be performed on the collections
 // set - unordered collection of unique objects - no duplicates can be shown
   // ex. a deck of 52 cards (each is a unique element in the collection)
-// list
+// list - has duplicates
 // queue
 // map
 public class CollectionsDemo {
 
     public static void main(String[] args) {
-        setDemo();
+        // setDemo();
+        listDemo();
     }
 
     public static void setDemo() {
@@ -46,5 +46,33 @@ public class CollectionsDemo {
         // another way of adding elements - but this set is immutable - can't be changed (add/remove)
         Set<String> moreFruit = Set.of("Pear", "Raisin", "Cherry");
         System.out.println(moreFruit);
+    }
+
+    public static void listDemo() {
+
+        List<String> vegetables = new ArrayList<>();
+        vegetables.add("Cucumber");
+        vegetables.add("Potato");
+        vegetables.add("Tomato");
+
+        // replace an element
+        vegetables.set(0, "Carrot");
+        // can contain duplicates
+        vegetables.add("Tomato");
+        // remove an element - removes the first instance
+        vegetables.remove("Tomato");
+        vegetables.add("Carrot");
+        vegetables.remove(3);
+        vegetables.add("Carrot");
+
+        // print out what's on a specific spot
+        System.out.println("Second element: " + vegetables.get(1));
+        // when we don't know where the object is
+        System.out.println(vegetables.indexOf("Tomato"));
+        System.out.println(vegetables.lastIndexOf("Carrot"));
+
+        System.out.println(vegetables);
+
+        List<String> moreVegetables = List.of("Cucumber", "Potato", "Tomato");
     }
 }
