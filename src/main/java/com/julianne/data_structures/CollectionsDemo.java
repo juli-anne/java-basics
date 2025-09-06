@@ -14,10 +14,10 @@ import java.util.*;
 public class CollectionsDemo {
 
     public static void main(String[] args) {
-        setDemo();
+        // setDemo();
         // listDemo();
         // queueDemo();
-        // mapDemo();
+        mapDemo();
     }
 
     public static void setDemo() {
@@ -129,5 +129,17 @@ public class CollectionsDemo {
                 3, "Apple Pay");
 
         System.out.println(otherPaymentMethods);
+
+        System.out.println("\n.....");
+
+        // iterating in a map - not the best way
+        Set<Map.Entry<Integer, String>> mapEntries = paymentMethods.entrySet();
+        var i = mapEntries.iterator();
+
+        while (i.hasNext()) {
+            Map.Entry<Integer, String> entry = i.next();
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
     }
 }
