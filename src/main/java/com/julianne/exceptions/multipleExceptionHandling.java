@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class multipleExceptionhandling {
+public class multipleExceptionHandling {
 
     public static void main(String[] args) {
 
@@ -16,8 +16,7 @@ public class multipleExceptionhandling {
             // read from the file
             while (fileReader.hasNext()) {
                 System.out.println(fileReader.nextDouble()); // throws an exception because expected double
-            }
-//          } catch (FileNotFoundException | InputMismatchException e ) {
+        } // catch (FileNotFoundException | InputMismatchException e ) {
 //            e.printStackTrace(); // catch in a single line
 //        }
 
