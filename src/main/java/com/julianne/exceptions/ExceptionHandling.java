@@ -14,7 +14,7 @@ public class ExceptionHandling {
 //        } catch (IOException e) {
 //            System.out.println("IOException: "  + e.getMessage());
 //        }
-        
+
         // POLYMORPHISM
         try {
             file.createNewFile();
@@ -33,5 +33,5 @@ public class ExceptionHandling {
 
 // ways of handling multiple exceptions:
 // 1. polymorphism
-// 2. multiple catch blocks
-// 3. catch multiple in single block
+// 2. multiple catch blocks - catch after catch
+// 3. catch multiple in single block - with |  and print stack trace
