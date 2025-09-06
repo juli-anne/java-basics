@@ -5,14 +5,17 @@ import java.util.*;
 // data structures store and organize a collection of objects in a way that operations can be performed on the collections
 // set - unordered collection of unique objects - no duplicates can be shown
   // ex. a deck of 52 cards (each is a unique element in the collection)
-// list - has duplicates
-// queue
+// list - ordered elements accessible by position, has duplicates
+// queue - ordered elements that are processed in the order in which they are added
+  // ex. people in a line are added to the end, the processing is handled from the beginning to the end
+  // type of processing - FIRST-IN-FIRST-OUT
 // map
 public class CollectionsDemo {
 
     public static void main(String[] args) {
         // setDemo();
-        listDemo();
+        // listDemo();
+        queueDemo();
     }
 
     public static void setDemo() {
@@ -74,5 +77,22 @@ public class CollectionsDemo {
         System.out.println(vegetables);
 
         List<String> moreVegetables = List.of("Cucumber", "Potato", "Tomato");
+    }
+
+    private static void queueDemo() {
+
+        Queue<String> checkout = new LinkedList<>();
+        checkout.add("first customer");
+        checkout.add("second customer");
+        checkout.add("third customer");
+        checkout.add("second customer"); // allows dupes
+
+        var removed = checkout.remove(); // will remove the first in line - THE HEAD OF THE LINE
+        System.out.println("Removed: " + removed);
+
+        // check the next head of the queue
+        System.out.println("Head of queue: " + checkout.peek());
+
+        System.out.println(checkout);
     }
 }
