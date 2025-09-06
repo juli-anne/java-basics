@@ -15,9 +15,9 @@ public class CollectionsDemo {
 
     public static void main(String[] args) {
         // setDemo();
-        // listDemo();
+         listDemo();
         // queueDemo();
-         mapDemo();
+        // mapDemo();
     }
 
     public static void setDemo() {
@@ -69,9 +69,25 @@ public class CollectionsDemo {
         vegetables.add("Tomato");
 
         // iterating with an enhanced for loop
+        System.out.println("Iterating with for: ");
         for(String vegetable : vegetables) {
             System.out.println(vegetable);
         }
+
+        System.out.println("\n.....");
+        // an even better way of iterating through a collection
+        System.out.println("Iterating with forEach: ");
+        vegetables.forEach(v->System.out.println(v)); // lambda
+        // OR
+        // vegetables.forEach(System.out::println);
+        System.out.println("\n");
+        // for multiple lines
+        vegetables.forEach(v->{
+            v = "vegetable " + v;
+            System.out.println(v);
+        });
+
+        // lambda is a block of code that works as a method, they don't have names, executed inline, not called - like an anon function
 
         System.out.println("\n.....");
 
