@@ -15,9 +15,9 @@ public class CollectionsDemo {
 
     public static void main(String[] args) {
         // setDemo();
-        listDemo();
+        // listDemo();
         // queueDemo();
-        // mapDemo();
+         mapDemo();
     }
 
     public static void setDemo() {
@@ -147,6 +147,12 @@ public class CollectionsDemo {
             Map.Entry<Integer, String> entry = i.next();
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
+            }
+
+        System.out.println("\n.....");
+        // iterating through a map with an enhanced for loop
+        for (Map.Entry<Integer, String> otherEntry : otherPaymentMethods.entrySet()) {
+            System.out.println(otherEntry.getKey() +  ": " + otherEntry.getValue());
         }
     }
 }
