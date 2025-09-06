@@ -15,9 +15,9 @@ public class CollectionsDemo {
 
     public static void main(String[] args) {
         // setDemo();
-        // listDemo();
+        listDemo();
         // queueDemo();
-        mapDemo();
+        // mapDemo();
     }
 
     public static void setDemo() {
@@ -67,6 +67,13 @@ public class CollectionsDemo {
         vegetables.add("Cucumber");
         vegetables.add("Potato");
         vegetables.add("Tomato");
+
+        // iterating with an enhanced for loop
+        for(String vegetable : vegetables) {
+            System.out.println(vegetable);
+        }
+
+        System.out.println("\n.....");
 
         // replace an element
         vegetables.set(0, "Carrot");
