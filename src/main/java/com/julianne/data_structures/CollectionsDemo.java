@@ -9,13 +9,15 @@ import java.util.*;
 // queue - ordered elements that are processed in the order in which they are added
   // ex. people in a line are added to the end, the processing is handled from the beginning to the end
   // type of processing - FIRST-IN-FIRST-OUT
-// map
+// map - unordered unique key-value pairs (considered a part of the collections framework even though it isn't really)
+  // ex. a list of bank transaction, each has an id as a key, the value would be the transaction
 public class CollectionsDemo {
 
     public static void main(String[] args) {
         // setDemo();
         // listDemo();
-        queueDemo();
+        // queueDemo();
+        mapDemo();
     }
 
     public static void setDemo() {
@@ -94,5 +96,30 @@ public class CollectionsDemo {
         System.out.println("Head of queue: " + checkout.peek());
 
         System.out.println(checkout);
+    }
+
+    public static void mapDemo() {
+
+        Map<Integer, String> paymentMethods = new HashMap<>();
+        paymentMethods.put(1, "Credit Card"); // use put not add
+        paymentMethods.put(2, "Debit Card"); // first value is the key, second the value
+        paymentMethods.put(3, "Cash");
+        // use if you aren't sure if it exists
+        paymentMethods.putIfAbsent(4, "Coupon Card"); // if you want to override something just use put again
+        // remove by its key
+        paymentMethods.remove(2);
+        // value for an object
+        System.out.println("Special payment methods: " + paymentMethods.get(4)); // get by the key because it's unique
+        System.out.println("Contains coupons: " + paymentMethods.containsValue("Coupon Card")); // containsKey
+
+        System.out.println(paymentMethods);
+
+        // immutable way
+        Map <Integer, String> otherPaymentMethods = Map.of(
+                1, "Bank Transfer",
+                2, "Keks Pay",
+                3, "Apple Pay");
+
+        System.out.println(otherPaymentMethods);
     }
 }
