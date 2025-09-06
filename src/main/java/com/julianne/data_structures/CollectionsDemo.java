@@ -15,9 +15,9 @@ public class CollectionsDemo {
 
     public static void main(String[] args) {
         // setDemo();
-        // listDemo();
+         listDemo();
         // queueDemo();
-        mapDemo();
+        // mapDemo();
     }
 
     public static void setDemo() {
@@ -79,7 +79,11 @@ public class CollectionsDemo {
         System.out.println("Iterating with forEach: ");
         vegetables.forEach(v->System.out.println(v)); // lambda
         // OR
-        // vegetables.forEach(System.out::println);
+        System.out.println("\n");
+        // a method reference - it knows the input you were going to use is the next object and
+        // passes it to the method, no need to specify it with the long form,
+        // works only if there is a single method to be executed, not on multiple
+        vegetables.forEach(System.out::println);
         System.out.println("\n");
         // for multiple lines
         vegetables.forEach(v->{
