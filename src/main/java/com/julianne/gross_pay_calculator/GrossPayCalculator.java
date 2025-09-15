@@ -1,4 +1,4 @@
-package com.julianne.basics;
+package com.julianne.gross_pay_calculator;
 
 import java.util.Scanner;
 

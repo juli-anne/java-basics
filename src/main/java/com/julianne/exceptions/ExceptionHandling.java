@@ -1,7 +1,6 @@
 package com.julianne.exceptions;
 
 import java.io.File;
-import java.io.IOException;
 
 public class ExceptionHandling {
 
